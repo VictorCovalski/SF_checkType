@@ -6,10 +6,10 @@ data T = INT
 
 typeCheck:: E -> T
 typeCheck (Num n) = INT
-typeCheck (Soma e1 e2) =
+typeCheck (Soma e1 e2) 
 				| typeCheck e1 == INT = typeCheck e2
 				| otherwise		      = error (show e1 ++ "Should have type INT")
-typeCheck (Mult e1 e2) =
+typeCheck (Mult e1 e2)
 				| typeCheck e1 == INT = typeCheck e2
 				| otherwise			  = error (show e1 ++ "Should have type INT")
 
